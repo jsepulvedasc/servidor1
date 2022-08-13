@@ -1,1 +1,118 @@
-[]
+[
+    {
+        "id": "e46b8b77b03c1bf5",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c494c6524e01bab9",
+        "type": "inject",
+        "z": "e46b8b77b03c1bf5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "c921d25ff45ffc38"
+            ]
+        ]
+    },
+    {
+        "id": "c921d25ff45ffc38",
+        "type": "debug",
+        "z": "e46b8b77b03c1bf5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b560d262ab06343f",
+        "type": "function",
+        "z": "e46b8b77b03c1bf5",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "1db196e745440b13"
+            ]
+        ]
+    },
+    {
+        "id": "a5f16506d29dcb60",
+        "type": "function",
+        "z": "e46b8b77b03c1bf5",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "b560d262ab06343f"
+            ]
+        ]
+    },
+    {
+        "id": "1db196e745440b13",
+        "type": "change",
+        "z": "e46b8b77b03c1bf5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    }
+]
